@@ -1,0 +1,15 @@
+services:
+  server:
+    build:
+      context: ./server
+    environment:
+      GARNISH_ADDRESS: ":8080"
+      GARNISH_CONFIG_PATH: "./"
+  kimono:
+    build:
+      context: ./kimono
+    environment:
+      KIMONO_ADDRESS: http://server:8080
+      KIMONO_MAANIFEST: test
+    depends_on:
+      - server

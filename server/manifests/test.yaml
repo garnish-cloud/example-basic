@@ -1,0 +1,13 @@
+env:
+  src:
+  - store: env
+    paths: 
+      - default
+
+files:
+ - src:
+      store: file
+      path: default.txt
+   dst:
+      path: ./default.txt
+      type: text
