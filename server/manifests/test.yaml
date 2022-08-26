@@ -1,4 +1,5 @@
 env:
+  passall: true
   src:
   - store: env
     paths: 
