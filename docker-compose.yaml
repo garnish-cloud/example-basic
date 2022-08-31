@@ -5,11 +5,13 @@ services:
     environment:
       GARNISH_ADDRESS: ":8080"
       GARNISH_CONFIG_PATH: "./"
-  kimono:
+  env:
     build:
-      context: ./kimono
+      context: ./env
+    command: env
     environment:
       KIMONO_ADDRESS: http://server:8080
-      KIMONO_MAANIFEST: test
+      KIMONO_MANIFEST: env
+      KIMONO_DEBUG: false
     depends_on:
       - server

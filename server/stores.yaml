@@ -1,10 +1,3 @@
-file:
-    driver: file
-    raw: true
-    driveropts:
-        parser: text
-        Path: /stores/files
-
 env:
     driver: file
     driveropts:
